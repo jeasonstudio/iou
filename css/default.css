@@ -10,13 +10,22 @@ body {
 	overflow: hidden;
 }
 
-#mainDiv{
+.mainDiv{
 	top: 100px;
 	width: 85%;
 	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	height: 50%;
+}
+
+.content {
+	width: 315px;
+	height: 600px;
+	margin-top: 0;
+	margin-right: 0;
+	padding-left: 12px;
+	padding-right: 8px;
 }
 
 #loveHeart {
@@ -76,36 +85,37 @@ body {
 	display:none;
 }
 
-#code {
+.code {
 	text-align: left!important;
 	float: left;
 	width: 100%;
 	height: 100%;
 	padding-left: 25px;
+	margin-top: 90px;
 	color: #333;
 	font-family: "digit","Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
 	font-size: 12px;
 	font-weight: bold;
 }
 
-#code .string{
+.code .string{
 	color: #2a36ff;
 }
 
-#code .keyword{
+.code .keyword{
 	color: #7f0055;
 	font-weight:bold;
 }
 
-#code .placeholder{
+.code .placeholder{
 	margin-left:15px;
 }
 
-#code .space{
+.code .space{
 	margin-left:7px;
 }
 
-#code .comments{
+.code .comments{
 	color: #3f7f5f;
 }
 

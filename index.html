@@ -12,7 +12,7 @@
     <link href="css/default.css" rel="stylesheet">
     <link href="css/swiper-3.3.1.min.css" rel="stylesheet">
     <script src="js/functions.js"></script>
-    <script src="js/garden.js"></script>
+    <!--<script src="js/garden.js"></script>-->
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
 </head>
 
@@ -22,9 +22,9 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide jt-back">
 
-                <div id="mainDiv">
-                    <div id="content">
-                        <div id="code">
+                <div id="mainDiv1" class="mainDiv">
+                    <div id="content1" class="content">
+                        <div id="code1" class="code">
                             <span class="comments">/**</span><br>
                             <span class="comments">/**</span><br>
 
@@ -34,8 +34,8 @@
                             <span class="space" /><span class="comments">* So I write some code </span><br><span class="space"
                             /><span class="comments">* to celebrate our met.</span><br /><span class="space" /><span class="comments">*/</span><br />
                             
-                            Boy i = <span class="keyword">new</span>                            Boy(<span class="string">"Jeason"</span>);<br /> 
-                            Girl u = <span class="keyword">new</span> Girl( <span class="string">"JFM"</span>);<br />
+                            Boy i = <span class="keyword">new</span>                            Boy( <span class="string">"Jeason"</span> );<br /> 
+                            Girl u = <span class="keyword">new</span> Girl( <span class="string">"JFM"</span> );<br />
                             <span class="comments">// Aug. 15, 2016, you're mine. </span><br />
                              i.miss(u);
                         </div>
@@ -44,7 +44,25 @@
 
             </div>
             <div class="swiper-slide jt-back">
+                <div id="mainDiv2" class="mainDiv">
+                    <div id="content2" class="content">
+                        <div id="code2" class="code">
+                            <span class="comments">/**</span><br>
+                            <span class="comments">/**</span><br>
 
+                            <span class="space" /><span class="comments">* We are both USTB CSers </span><br> <span class="space"
+                            /><span class="comments">* And programmers(Maybe U're Not, hh)</span><br />
+
+                            <span class="space" /><span class="comments">* So I write some code </span><br><span class="space"
+                            /><span class="comments">* to celebrate our met.</span><br /><span class="space" /><span class="comments">*/</span><br />
+                            
+                            Boy i = <span class="keyword">new</span>                            Boy( <span class="string">"Jeason"</span> );<br /> 
+                            Girl u = <span class="keyword">new</span> Girl( <span class="string">"JFM"</span> );<br />
+                            <span class="comments">// Aug. 15, 2016, you're mine. </span><br />
+                             i.miss(u);
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="swiper-slide jt-back">
 
@@ -61,48 +79,40 @@
 
         <div>
             <div id="elapseClock"></div>
-            <div class="footer">Copyright &copy; 2015-2016 <a href="http://jeasonstudio.github.io">Jeasonstudio</a></div>
+            <div class="footer">Copyright &copy; 2015-2016 <a href="https://jeasonstudio.github.io">Jeasonstudio</a></div>
         </div>
     </div>
 
     <!-- Initialize Swiper -->
     <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        touchMoveStopPropagation : true,    //阻止冒泡
-        paginationClickable: true,
-        direction: 'vertical'
-    });
-    	var offsetX = $("#loveHeart").width() / 2;
-		var offsetY = $("#loveHeart").height() / 2 - 55;
-		var together = new Date();
-		together.setFullYear(2016,08,15);
-		together.setHours(21);
-		together.setMinutes(0);
-		together.setSeconds(0);
-		together.setMilliseconds(0);
-		
-		if (!document.createElement('canvas').getContext) {
-			var msg = document.createElement("div");
-			msg.id = "errorMsg";
-			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-			document.body.appendChild(msg);
-			$("#code").css("display", "none")
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            touchMoveStopPropagation : true,    //阻止冒泡
+            paginationClickable: true,
+            direction: 'vertical',
+            effect : 'flip',
+            flip: {slideShadows : false}
+        });
 
-		    document.execCommand("stop");
-		} else {
-			setTimeout(function () {
-				startHeartAnimation();
-			}, 5000);
+        $("#code1").typewriter();
 
-			timeElapse(together);
-			setInterval(function () {
-				timeElapse(together);
-			}, 500);
+        var together = new Date();
+        together.setFullYear(2016, 8, 15);
+        together.setHours(21);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
 
-			adjustCodePosition();
-			$("#code").typewriter();
-		}
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 1000);
+
+        // adjustCodePosition();
     </script>
 </body>
 

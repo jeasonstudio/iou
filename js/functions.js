@@ -16,12 +16,6 @@ $(function () {
     gardenCtx.globalCompositeOperation = "lighter";
     garden = new Garden(gardenCtx, gardenCanvas);
 	
-	$("#content").css("width", 315);
-	$("#content").css("height", 600 );
-	$("#content").css("margin-top", 0);
-	$("#content").css("margin-right", 0 );
-	$("#content").css("padding-left", 12 );
-	$("#content").css("padding-right", 8 );
 
     // renderLoop
     setInterval(function () {
@@ -130,9 +124,9 @@ function showMessages() {
 // 	$('#words').css("left", $("#garden").position().left + 70);
 // }
 
-function adjustCodePosition() {
-	$('#code').css("margin-top", 90 );
-}
+// function adjustCodePosition() {
+// 	$('#code').css("margin-top", 90 );
+// }
 
 function showLoveU() {
 	$('#loveu').fadeIn(3000);
