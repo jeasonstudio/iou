@@ -94,3 +94,20 @@ body {
 .jt-blue {
     color: #0066CC;
 }
+
+.footer {
+    position: fixed;
+    display: block;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+}
+
+.footer > a {
+    color: #000; 
+}
+.footer > a:link{
+    text-decoration:none;
+}

@@ -32,11 +32,12 @@
                             /><span class="comments">* And programmers(Maybe U're Not, hh)</span><br />
 
                             <span class="space" /><span class="comments">* So I write some code </span><br><span class="space"
-                            /><span class="comments">* to celebrate our met.</span><br />
-
-                            <span class="space" /><span class="comments">*/</span><br /> Boy i = <span class="keyword">new</span>                            Boy(<span class="string">"Jeason"</span>);<br /> Girl u = <span class="keyword">new</span> Girl(
-                            <span class="string">"JFM"</span>);<br />
-                                <span class="comments">// Aug. 15, 2016, you're mine. </span><br /> i.miss(u);
+                            /><span class="comments">* to celebrate our met.</span><br /><span class="space" /><span class="comments">*/</span><br />
+                            
+                            Boy i = <span class="keyword">new</span>                            Boy(<span class="string">"Jeason"</span>);<br /> 
+                            Girl u = <span class="keyword">new</span> Girl( <span class="string">"JFM"</span>);<br />
+                            <span class="comments">// Aug. 15, 2016, you're mine. </span><br />
+                             i.miss(u);
                         </div>
                     </div>
                 </div>
@@ -60,6 +61,7 @@
 
         <div>
             <div id="elapseClock"></div>
+            <div class="footer">Copyright &copy; 2015-2016 <a href="http://jeasonstudio.github.io">Jeasonstudio</a></div>
         </div>
     </div>
 
@@ -74,7 +76,7 @@
     	var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
 		var together = new Date();
-		together.setFullYear(2016, 8, 15);
+		together.setFullYear(2016,08,15);
 		together.setHours(21);
 		together.setMinutes(0);
 		together.setSeconds(0);
@@ -86,8 +88,7 @@
 			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
 			document.body.appendChild(msg);
 			$("#code").css("display", "none")
-			$("#copyright").css("position", "absolute");
-			$("#copyright").css("bottom", "10px");
+
 		    document.execCommand("stop");
 		} else {
 			setTimeout(function () {
