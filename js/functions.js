@@ -89,6 +89,7 @@ function getHeartPoint(angle) {
 })(jQuery);
 
 function timeElapse(date){
+
 	var current = Date();
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
 	var days = Math.floor(seconds / (3600 * 24));
@@ -103,11 +104,12 @@ function timeElapse(date){
 		minutes = "0" + minutes;
 	}
 	seconds = seconds % 60;
+
 	if (seconds < 10) {
 		seconds = "0" + seconds;
 	}
 	
-	var result = "<span class=\"digit\">" + days + "</span> Days <span class=\"digit\">" + hours + "</span> Hours <span class=\"digit\">" + minutes + "</span> Mins <span class=\"digit\">" + seconds + "</span> Secs"; 
+	var result = "Days matter: <span class=\"digit\"> " + days + " </span> Days <span class=\"digit\"> " + hours + " </span> Hours <span class=\"digit\"> " + minutes + " </span> Mins <span class=\"digit\"> " + seconds + " </span> Secs"; 
 	$("#elapseClock").html(result);
 }
 
