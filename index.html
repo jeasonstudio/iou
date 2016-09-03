@@ -56,7 +56,7 @@
                             <span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
                             <span class="keyword">while</span> (isHesitate) {<br />
                             <span class="placeholder"/>i.waitFor(u);<br />}
-                            <span class="comments">life is impressive.</span>
+                            <span class="comments">// Life is impressive.</span>
                         </div>
                     </div>
                 </div>
@@ -82,18 +82,23 @@
 
     <!-- Initialize Swiper -->
     <script>
+        $("#code1").typewriter();
+
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             touchMoveStopPropagation : true,    //阻止冒泡
             paginationClickable: true,
             direction: 'vertical',
             effect : 'flip',
-            flip: {slideShadows : false}
+            flip: {slideShadows : false},
+            onSlideChangeEnd: function(swiper){
+                // alert('事件触发了;');
+                console.log(swiper.activeIndex);
+                var thisSliderId = '#code' + (swiper.activeIndex + 1);
+                // console.log(thisSliderId);
+                $(thisSliderId).typewriter();
+            }
         });
-
-        $("#code1").typewriter();
-
-        $("#code2").typewriter();
 
         var together = new Date();
         together.setFullYear(2016, 7, 15);
