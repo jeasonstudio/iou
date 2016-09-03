@@ -16,10 +16,12 @@ $(function () {
     gardenCtx.globalCompositeOperation = "lighter";
     garden = new Garden(gardenCtx, gardenCanvas);
 	
-	$("#content").css("width", $loveHeart.width() + $("#code").width());
-	$("#content").css("height", Math.max($loveHeart.height(), $("#code").height()));
-	$("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2, 10));
-	$("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));
+	$("#content").css("width", 315);
+	$("#content").css("height", 600 );
+	$("#content").css("margin-top", 0);
+	$("#content").css("margin-right", 0 );
+	$("#content").css("padding-left", 12 );
+	$("#content").css("padding-right", 8 );
 
     // renderLoop
     setInterval(function () {
@@ -42,33 +44,33 @@ function getHeartPoint(angle) {
 	return new Array(offsetX + x, offsetY + y);
 }
 
-function startHeartAnimation() {
-	var interval = 50;
-	var angle = 10;
-	var heart = new Array();
-	var animationTimer = setInterval(function () {
-		var bloom = getHeartPoint(angle);
-		var draw = true;
-		for (var i = 0; i < heart.length; i++) {
-			var p = heart[i];
-			var distance = Math.sqrt(Math.pow(p[0] - bloom[0], 2) + Math.pow(p[1] - bloom[1], 2));
-			if (distance < Garden.options.bloomRadius.max * 1.3) {
-				draw = false;
-				break;
-			}
-		}
-		if (draw) {
-			heart.push(bloom);
-			garden.createRandomBloom(bloom[0], bloom[1]);
-		}
-		if (angle >= 30) {
-			clearInterval(animationTimer);
-			showMessages();
-		} else {
-			angle += 0.2;
-		}
-	}, interval);
-}
+// function startHeartAnimation() {
+// 	var interval = 50;
+// 	var angle = 10;
+// 	var heart = new Array();
+// 	var animationTimer = setInterval(function () {
+// 		var bloom = getHeartPoint(angle);
+// 		var draw = true;
+// 		for (var i = 0; i < heart.length; i++) {
+// 			var p = heart[i];
+// 			var distance = Math.sqrt(Math.pow(p[0] - bloom[0], 2) + Math.pow(p[1] - bloom[1], 2));
+// 			if (distance < Garden.options.bloomRadius.max * 1.3) {
+// 				draw = false;
+// 				break;
+// 			}
+// 		}
+// 		if (draw) {
+// 			heart.push(bloom);
+// 			garden.createRandomBloom(bloom[0], bloom[1]);
+// 		}
+// 		if (angle >= 30) {
+// 			clearInterval(animationTimer);
+// 			showMessages();
+// 		} else {
+// 			angle += 0.2;
+// 		}
+// 	}, interval);
+// }
 
 (function($) {
 	$.fn.typewriter = function() {
@@ -128,7 +130,7 @@ function adjustWordsPosition() {
 }
 
 function adjustCodePosition() {
-	$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2);
+	$('#code').css("margin-top", 90 );
 }
 
 function showLoveU() {

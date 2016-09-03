@@ -2,13 +2,17 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #FFFFEE;
-	font-size: 12px;
-	overflow: auto;
+	font-size: 14px;
+	overflow: hidden;
 }
 
 #mainDiv{
-	width: 100%;
-	height: 100%;
+	top: 100px;
+	width: 85%;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50%;
 }
 
 #loveHeart {
@@ -65,12 +69,14 @@ body {
 }
 
 #code {
+	text-align: left!important;
 	float: left;
-	width: 440px;
-	height: 400px;
+	width: 100%;
+	height: 100%;
+	padding-left: 20px;
 	color: #333;
 	font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
-	font-size: 12px;
+	font-size: 14px;
 }
 
 #code .string{
