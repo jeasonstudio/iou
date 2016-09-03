@@ -112,22 +112,23 @@ function timeElapse(date){
 	if (seconds < 10) {
 		seconds = "0" + seconds;
 	}
-	var result = "<span class=\"digit\">" + days + "</span> days <span class=\"digit\">" + hours + "</span> hours <span class=\"digit\">" + minutes + "</span> minutes <span class=\"digit\">" + seconds + "</span> seconds"; 
+	
+	var result = "<span class=\"digit\">" + days + "</span> Days <span class=\"digit\">" + hours + "</span> Hours <span class=\"digit\">" + minutes + "</span> Mins <span class=\"digit\">" + seconds + "</span> Secs"; 
 	$("#elapseClock").html(result);
 }
 
 function showMessages() {
-	adjustWordsPosition();
+	// adjustWordsPosition();
 	$('#messages').fadeIn(5000, function() {
 		showLoveU();
 	});
 }
 
-function adjustWordsPosition() {
-	$('#words').css("position", "absolute");
-	$('#words').css("top", $("#garden").position().top + 195);
-	$('#words').css("left", $("#garden").position().left + 70);
-}
+// function adjustWordsPosition() {
+// 	$('#words').css("position", "absolute");
+// 	$('#words').css("top", $("#garden").position().top + 195);
+// 	$('#words').css("left", $("#garden").position().left + 70);
+// }
 
 function adjustCodePosition() {
 	$('#code').css("margin-top", 90 );
