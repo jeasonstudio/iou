@@ -39,6 +39,7 @@
     <script>
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
+        touchMoveStopPropagation : true,    //阻止冒泡
         paginationClickable: true,
         direction: 'vertical'
     });
