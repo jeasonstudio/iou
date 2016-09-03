@@ -1,8 +1,12 @@
+@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
 body {
 	margin: 0;
 	padding: 0;
 	background: #FFFFEE;
-	font-size: 14px;
+	font-size: 12px;
 	overflow: hidden;
 }
 
@@ -76,7 +80,7 @@ body {
 	padding-left: 20px;
 	color: #333;
 	font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
-	font-size: 14px;
+	font-size: 12px;
 }
 
 #code .string{
