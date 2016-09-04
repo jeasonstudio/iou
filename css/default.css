@@ -108,6 +108,11 @@ body {
 	font-weight:bold;
 }
 
+.code .variable{
+	color: #0066CC;
+	font-weight:bold;
+}
+
 .code .placeholder{
 	margin-left:15px;
 }
