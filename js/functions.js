@@ -68,6 +68,7 @@ function getHeartPoint(angle) {
 
 (function($) {
 	$.fn.typewriter = function() {
+		this.css('display','block');
 		this.each(function() {
 			var $ele = $(this), str = $ele.html(), progress = 0;
 			$ele.html('');
@@ -78,13 +79,19 @@ function getHeartPoint(angle) {
 				} else {
 					progress++;
 				}
-				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+				$ele.html(str.substring(0, progress) + (progress & 1 ? '▍' : ''));
 				if (progress >= str.length) {
 					clearInterval(timer);
 				}
 			}, 75);
 		});
 		return this;
+	};
+})(jQuery);
+
+(function($) {
+	$.fn.typeStop = function() {
+		this.css('display','none');
 	};
 })(jQuery);
 

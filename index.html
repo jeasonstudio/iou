@@ -17,15 +17,18 @@
 </head>
 
 <body>
+    <div class="footerMain">
+        <div id="elapseClock"></div>
+        <div class="footer">Copyright &copy; 2015-2016 <a href="https://jeasonstudio.github.io">Jeasonstudio</a></div>
+    </div>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide jt-back">
+            <div class="swiper-slide jt-default">
 
                 <div id="mainDiv1" class="mainDiv">
                     <div id="content1" class="content">
                         <div id="code1" class="code">
-                            <span class="comments">/**</span><br>
                             <span class="comments">/**</span><br>
 
                             <span class="space" /><span class="comments">* We are both USTB CSers </span><br> <span class="space" /><span class="comments">* and programmers(Maybe U're Not, hh)</span><br />
@@ -34,19 +37,18 @@
                             /><span class="comments">* to celebrate our met.</span><br /><span class="space" /><span class="comments">*/</span><br />
                             
                             Boy <span class="variable">i</span> = <span class="keyword">new</span>                            Boy(<span class="string">"Jeason"</span>);<br />
-                            Girl <span class="variable">u</span> = <span class="keyword">new</span> Girl(<span class="string">"JFM"</span>);<br />
+                            Girl <span class="variable">u</span> = <span class="keyword">new</span> Girl(<span class="string">"傻了吧唧的贾同学"</span>);<br /><br />
                             <span class="comments">// Aug. 15, 2016, you're mine. </span><br />
-                             i.miss(u);
+                             i.got(u);
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="swiper-slide jt-back">
+            <div class="swiper-slide jt-default">
                 <div id="mainDiv2" class="mainDiv">
                     <div id="content2" class="content">
                         <div id="code2" class="code">
-                            <span class="comments">/**</span><br>
                             <span class="comments">/**</span><br>
 
                             <span class="space" /><span class="comments">* You said we should know each other.</span><br> <span class="space" /><span class="comments">* Let time say love.</span><br />
@@ -61,42 +63,49 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide jt-back">
+            <div class="swiper-slide jt-default">
 
             </div>
-            <div class="swiper-slide jt-back">
+            <div class="swiper-slide">
 
             </div>
-            <div class="swiper-slide jt-back">
+            <div class="swiper-slide">
 
             </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
 
-        <div>
-            <div id="elapseClock"></div>
-            <div class="footer">Copyright &copy; 2015-2016 <a href="https://jeasonstudio.github.io">Jeasonstudio</a></div>
-        </div>
     </div>
 
     <!-- Initialize Swiper -->
     <script>
         $("#code1").typewriter();
+        $("#code2").typeStop();
 
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             touchMoveStopPropagation : true,    //阻止冒泡
             paginationClickable: true,
             direction: 'vertical',
-            effect : 'flip',
+            // effect : 'fade',
             flip: {slideShadows : false},
-            onSlideChangeEnd: function(swiper){
-                // alert('事件触发了;');
+            onSlideChangeStart: function(swiper){  //todo
+                // console.log(swiper.activeIndex);
+                var thisSliderIdB = '#code' + (swiper.activeIndex + 2);
+                var thisSliderIdN = '#code' + (swiper.activeIndex);
+                console.log(thisSliderIdB + thisSliderIdN);
+                // $(thisSliderId).typewriter();
+            },
+            onSlideChangeEnd: function(swiper){  //todo
                 console.log(swiper.activeIndex);
                 var thisSliderId = '#code' + (swiper.activeIndex + 1);
+                var thisSliderIdB = '#code' + (swiper.activeIndex + 2);
+                var thisSliderIdN = '#code' + (swiper.activeIndex);
                 // console.log(thisSliderId);
                 $(thisSliderId).typewriter();
+                $(thisSliderIdB).typeStop();
+                $(thisSliderIdN).typeStop();
             }
         });
 
