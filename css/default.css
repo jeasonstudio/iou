@@ -71,7 +71,8 @@ body {
 }
 
 .code .string{
-	color: #0086b3!important;
+	/*color: #0086b3!important;*/
+	color: rgba(86, 156, 214, 1)!important;
 }
 
 .code .keyword{
@@ -80,7 +81,8 @@ body {
 }
 
 .code .variable{
-	color: #0086b3!important;
+	/*color: #0086b3!important;*/
+	color: rgba(156, 220, 254, 1)!important;
 	font-weight:bold;
 }
 
@@ -93,7 +95,8 @@ body {
 }
 
 .code .comments{
-	color: #63a35c!important;
+	/*color: #63a35c!important;*/
+	color: rgba(96, 139, 78, 1)!important;
 }
 
 #errorMsg{
