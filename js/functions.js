@@ -66,9 +66,12 @@ function getHeartPoint(angle) {
 // 	}, interval);
 // }
 
+
 (function($) {
 	$.fn.typewriter = function() {
 		this.css('display','block');
+		swiper.lockSwipeToNext();
+		swiper.lockSwipeToPrev();
 		this.each(function() {
 			var $ele = $(this), str = $ele.html(), progress = 0;
 			$ele.html('');
@@ -82,6 +85,7 @@ function getHeartPoint(angle) {
 				$ele.html(str.substring(0, progress) + (progress & 1 ? '▍' : ''));
 				if (progress >= str.length) {
 					clearInterval(timer);
+					unLock();
 				}
 			}, 75);
 		});
@@ -94,6 +98,11 @@ function getHeartPoint(angle) {
 		this.css('display','none');
 	};
 })(jQuery);
+
+var unLock = function () {
+	swiper.unlockSwipeToNext();
+	swiper.unlockSwipeToPrev();
+}
 
 function timeElapse(date){
 
@@ -116,7 +125,7 @@ function timeElapse(date){
 		seconds = "0" + seconds;
 	}
 	
-	var result = "Days matter: <span class=\"digit\"> " + days + " </span> Days <span class=\"digit\"> " + hours + " </span> Hours <span class=\"digit\"> " + minutes + " </span> Mins <span class=\"digit\"> " + seconds + " </span> Secs"; 
+	var result = "Days matter: <span class=\"digit\">" + days + "</span>Days <span class=\"digit\"> " + hours + " </span>Hours <span class=\"digit\"> " + minutes + " </span>Mins <span class=\"digit\"> " + seconds + " </span>Secs"; 
 	$("#elapseClock").html(result);
 }
 

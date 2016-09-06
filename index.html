@@ -50,6 +50,9 @@
                             <span class="keyword">while</span> (<span class="variable">isHesitate</span>) {<br />
                             <span class="placeholder"/>i.waitFor(u);<br />} <br />
                             <span class="comments">// Life is impressive.</span>
+
+                            <br><br><br>
+                            <span class="comments">/******* Slide Up To Continue *******/</span>
                         </div>
                     </div>
                 </div>
@@ -90,23 +93,18 @@
 
     <!-- Initialize Swiper -->
     <script>
-        $("#code1").typewriter();
-        $("#code2").typeStop();
+
 
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             touchMoveStopPropagation : true,    //阻止冒泡
             paginationClickable: true,
             direction: 'vertical',
+            // allowSwipeToNext: false,
+            // allowSwipeToPrev: false,
             // effect : 'fade',
             flip: {slideShadows : false},
-            onSlideChangeStart: function(swiper){  //todo
-                // console.log(swiper.activeIndex);
-                var thisSliderIdB = '#code' + (swiper.activeIndex + 2);
-                var thisSliderIdN = '#code' + (swiper.activeIndex);
-                console.log(thisSliderIdB + thisSliderIdN);
-                // $(thisSliderId).typewriter();
-            },
+
             onSlideChangeEnd: function(swiper){  //todo
                 console.log(swiper.activeIndex);
                 var thisSliderId = '#code' + (swiper.activeIndex + 1);
@@ -118,6 +116,12 @@
                 $(thisSliderIdN).typeStop();
             }
         });
+
+        swiper.lockSwipeToNext();
+        swiper.lockSwipeToPrev();
+
+        $("#code1").typewriter();
+        $("#code2").typeStop();
 
         var together = new Date();
         together.setFullYear(2016, 7, 15);

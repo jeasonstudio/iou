@@ -35,7 +35,7 @@ body {
     right: 0;
     bottom: 35px;
 	font-family: "digit","Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
-	font-weight: bold;
+	/*font-weight: bold;*/
 	z-index: 999;
 }
 
