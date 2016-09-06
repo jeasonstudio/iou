@@ -5,7 +5,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: #fff;
 	font-size: 12px;
 	overflow: hidden;
 }
@@ -35,7 +34,8 @@ body {
     left: 0;
     right: 0;
     bottom: 35px;
-	font-family: 'digit',微软雅黑;
+	font-family: "digit","Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+	font-weight: bold;
 	z-index: 999;
 }
 

@@ -1,7 +1,7 @@
 
 html,
 body {
-    background-color: #272822;
+    background-color: #1e1e1e;
     position: relative;
     height: 100%;
 }
@@ -10,7 +10,7 @@ body {
     background: #fff;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
-    color: #000;
+    /*color: #000;*/
     margin: 0;
     padding: 0;
 }
@@ -23,7 +23,7 @@ body {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    /*background: #fff;*/
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -58,7 +58,7 @@ body {
 }
 
 .jt-default {
-    background-color: #272822;
+    background-color: #1e1e1e;
 }
 
 .footer {
@@ -69,7 +69,8 @@ body {
     left: 0;
     right: 0;
     bottom: 15px;
-    font-family: 微软雅黑;
+    font-family: "digit","Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+	font-weight: bold;
     z-index: 999;
 }
 
