@@ -35,7 +35,7 @@ body {
     left: 0;
     right: 0;
     bottom: 35px;
-	font-family: 微软雅黑;
+	font-family: 'digit',微软雅黑;
 	z-index: 999;
 }
 
@@ -59,7 +59,8 @@ body {
 	text-align: left!important;
 	float: left;
 	height: 100%;
-	width: 100%;
+	width: 1000px;
+	overflow: hidden;
 	padding-left: 15px;
 	margin-top: 60px;
 	color: #bbb;
