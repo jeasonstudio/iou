@@ -70,8 +70,7 @@ function getHeartPoint(angle) {
 (function($) {
 	$.fn.typewriter = function() {
 		this.css('display','block');
-		swiper.lockSwipeToNext();
-		swiper.lockSwipeToPrev();
+		swiper.lockSwipes();
 		this.each(function() {
 			var $ele = $(this), str = $ele.html(), progress = 0;
 			$ele.html('');
@@ -100,8 +99,7 @@ function getHeartPoint(angle) {
 })(jQuery);
 
 var unLock = function () {
-	swiper.unlockSwipeToNext();
-	swiper.unlockSwipeToPrev();
+	swiper.unlockSwipes();
 }
 
 function timeElapse(date){
