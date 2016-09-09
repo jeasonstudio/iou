@@ -50,11 +50,6 @@ body {
 	display: none;
 }
 
-#elapseClock .digit{
-	font-family: 微软雅黑;
-	font-size: 12px;
-}
-
 .code {
 	text-align: left!important;
 	float: left;
