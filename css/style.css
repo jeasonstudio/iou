@@ -82,6 +82,26 @@ body {
 .footer > a {
     color: #bbb; 
 }
+
 .footer > a:link{
     text-decoration:none;
+}
+
+img {
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.imgBox {
+    position: absolute;
+    top: 55px;
+}
+
+.matterDate {
+    color: #bbb;
+    font-family: 'AppleGothic';
+}
+
+.matterDate > span {
+    line-height: 2;
 }

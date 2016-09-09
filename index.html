@@ -12,6 +12,7 @@
     <link href="css/default.css" rel="stylesheet">
     <link href="css/swiper-3.3.1.min.css" rel="stylesheet">
     <script src="js/functions.js"></script>
+    <script src="js/countUp.js"></script>
     <!--<script src="js/garden.js"></script>-->
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
 </head>
@@ -24,6 +25,7 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
+
             <div class="swiper-slide jt-default">
 
                 <div id="mainDiv1" class="mainDiv">
@@ -130,12 +132,19 @@
                 </div>
 
             </div>
-            <div class="swiper-slide">
-
+            <div class="swiper-slide jt-default">
+                <div class="imgBox">
+                    <img src="img/me.jpeg" alt="" id="me">
+                    <img src="img/she.jpeg" alt="" id="she">
+                </div>
+                <div class="matterDate" id="xxx">
+                    <span id="md"></span> Days
+                    <span id="mh"></span> Hours <br>
+                    <span id="mm"></span> Minutes
+                    <span id="ms"></span> Seconds
+                </div>
             </div>
-            <div class="swiper-slide">
 
-            </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -144,7 +153,6 @@
 
     <!-- Initialize Swiper -->
     <script>
-
 
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
@@ -155,18 +163,23 @@
             flip: {slideShadows : false},
 
             onSlideChangeEnd: function(swiper){  //todo
-                console.log(swiper.activeIndex);
-                var thisSliderId = '#code' + (swiper.activeIndex + 1);
-                var thisSliderIdB = '#code' + (swiper.activeIndex + 2);
-                var thisSliderIdN = '#code' + (swiper.activeIndex);
-                // console.log(thisSliderId);
-                $(thisSliderId).typewriter();
-                $(thisSliderIdB).typeStop();
-                $(thisSliderIdN).typeStop();
+                if(swiper.activeIndex < 3) {
+                    console.log(swiper.activeIndex);
+                    var thisSliderId = '#code' + (swiper.activeIndex + 1);
+                    var thisSliderIdB = '#code' + (swiper.activeIndex + 2);
+                    var thisSliderIdN = '#code' + (swiper.activeIndex);
+                    // console.log(thisSliderId);
+                    $(thisSliderId).typewriter();
+                    $(thisSliderIdB).typeStop();
+                    $(thisSliderIdN).typeStop();
+                }
+                else if(swiper.activeIndex = 3) {
+                    finalPage();
+                }
             }
         });
 
-        swiper.lockSwipes();
+        // swiper.lockSwipes();
 
         $("#code1").typewriter();
         $("#code2").typeStop();
@@ -178,16 +191,11 @@
         together.setSeconds(0);
         together.setMilliseconds(0);
 
-        // setTimeout(function () {
-        //     startHeartAnimation();
-        // }, 5000);
-
         timeElapse(together);
         setInterval(function () {
             timeElapse(together);
         }, 1000);
 
-        // adjustCodePosition();
     </script>
 </body>
 
