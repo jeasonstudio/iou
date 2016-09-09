@@ -69,7 +69,7 @@ body {
     left: 0;
     right: 0;
     bottom: 15px;
-    font-family: "digit","Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+    font-family: "sans-serif" , "digit","Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New";
 	/*font-weight: bold;*/
     z-index: 999;
 }
