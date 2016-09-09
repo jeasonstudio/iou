@@ -34,7 +34,7 @@ body {
     left: 0;
     right: 0;
     bottom: 35px;
-	font-family: "sans-serif" , "digit","Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+	font-family: 微软雅黑;
 	/*font-weight: bold;*/
 	z-index: 999;
 }
