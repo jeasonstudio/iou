@@ -4,26 +4,6 @@ var clientWidth = $(window).width();
 var clientHeight = $(window).height();
 var d, h, m, s;
 
-// $(function () {
-//     // setup garden
-// 	$loveHeart = $("#loveHeart");
-// 	var offsetX = $loveHeart.width() / 2;
-// 	var offsetY = $loveHeart.height() / 2 - 55;
-//     $garden = $("#garden");
-//     gardenCanvas = $garden[0];
-// 	gardenCanvas.width = $("#loveHeart").width();
-//     gardenCanvas.height = $("#loveHeart").height()
-//     gardenCtx = gardenCanvas.getContext("2d");
-//     gardenCtx.globalCompositeOperation = "lighter";
-//     garden = new Garden(gardenCtx, gardenCanvas);
-
-
-//     // renderLoop
-//     setInterval(function () {
-//         garden.render();
-//     }, Garden.options.growSpeed);
-// });
-
 $(window).resize(function () {
     var newWidth = $(window).width();
     var newHeight = $(window).height();
@@ -39,39 +19,10 @@ function getHeartPoint(angle) {
 	return new Array(offsetX + x, offsetY + y);
 }
 
-// function startHeartAnimation() {
-// 	var interval = 50;
-// 	var angle = 10;
-// 	var heart = new Array();
-// 	var animationTimer = setInterval(function () {
-// 		var bloom = getHeartPoint(angle);
-// 		var draw = true;
-// 		for (var i = 0; i < heart.length; i++) {
-// 			var p = heart[i];
-// 			var distance = Math.sqrt(Math.pow(p[0] - bloom[0], 2) + Math.pow(p[1] - bloom[1], 2));
-// 			if (distance < Garden.options.bloomRadius.max * 1.3) {
-// 				draw = false;
-// 				break;
-// 			}
-// 		}
-// 		if (draw) {
-// 			heart.push(bloom);
-// 			garden.createRandomBloom(bloom[0], bloom[1]);
-// 		}
-// 		if (angle >= 30) {
-// 			clearInterval(animationTimer);
-// 			showMessages();
-// 		} else {
-// 			angle += 0.2;
-// 		}
-// 	}, interval);
-// }
-
-
 (function ($) {
 	$.fn.typewriter = function () {
 		this.css('display', 'block');
-		// swiper.lockSwipes();
+		swiper.lockSwipes();
 		this.each(function () {
 			var $ele = $(this), str = $ele.html(), progress = 0;
 			$ele.html('');
@@ -100,7 +51,7 @@ function getHeartPoint(angle) {
 })(jQuery);
 
 var unLock = function () {
-	// swiper.unlockSwipes();
+	swiper.unlockSwipes();
 }
 
 function timeElapse(date) {
@@ -134,37 +85,18 @@ function timeElapse(date) {
 }
 
 function showMessages() {
-	// adjustWordsPosition();
 	$('#messages').fadeIn(5000, function () {
 		showLoveU();
 	});
 }
 
-// function adjustWordsPosition() {
-// 	$('#words').css("position", "absolute");
-// 	$('#words').css("top", $("#garden").position().top + 195);
-// 	$('#words').css("left", $("#garden").position().left + 70);
-// }
-
-// function adjustCodePosition() {
-// 	$('#code').css("margin-top", 90 );
-// }
-
-// function showLoveU() {
-// 	$('#loveu').fadeIn(3000);
-// }
-
 var finalPage = function () {
 
 	$("#elapseClock").fadeOut(5000);
-	// $("#xxx").fadeIn(3000);
 
 	var daysMa = d + ' Days ' + h + ' Hours ' + m + ' Minutes ' + s;
 	console.log(daysMa);
-	// $(".matterDate").fadeIn(3000,function(){
-	// 	$(".matterDate").html(daysMa);
-	// })
-	// alert(s);
+
 	var i = 1;
 	var thiss = 60;
 	var thism = 60;

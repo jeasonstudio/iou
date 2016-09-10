@@ -175,12 +175,13 @@
                     $(thisSliderIdN).typeStop();
                 }
                 else if(swiper.activeIndex = 3) {
+                    swiper.lockSwipes();
                     finalPage();
                 }
             }
         });
 
-        // swiper.lockSwipes();
+        swiper.lockSwipes();
 
         $("#code1").typewriter();
         $("#code2").typeStop();
