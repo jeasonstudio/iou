@@ -95,7 +95,7 @@ var finalPage = function () {
 	$("#elapseClock").fadeOut(5000);
 
 	var daysMa = d + ' Days ' + h + ' Hours ' + m + ' Minutes ' + s;
-	console.log(daysMa);
+	// console.log(daysMa);
 
 	var i = 1;
 	var thiss = 60;
@@ -113,7 +113,7 @@ var finalPage = function () {
 	// console.log(upSec);
 
 	function checkMin() {
-		console.log(i);
+		// console.log(i);
 		i++;
 		if ($("#mm").html() >= m) { thiss = s; upSec.reset(); upSec = new CountUp("ms", 0, s, 0, 1); upSec.start(); startChange(); }
 		else { upSec.reset(); upSec.start(checkMin); }
@@ -143,6 +143,6 @@ var finalPage = function () {
 		}
 	}, 1000);
 	var startChange = function () {
-		console.log("asd");
+		// console.log("asd");
 	}
 }
